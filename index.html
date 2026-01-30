@@ -41,3 +41,61 @@
       font-size: 18px;
       border-radius: 999px;
       border: 1px solid #3a3a3a;
+      outline: 0;
+      background: #2c2c2c;
+      color: #ffffff;
+    }
+
+    input[type="text"]::placeholder{
+      color: #bdbdbd;
+    }
+
+    button{
+      padding: 14px 22px;
+      font-size: 18px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      background: #3a3a3a;
+      color: #ffffff;
+    }
+
+    .weather {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      min-height: 50px;
+    }
+
+    iframe {
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="box">
+
+      <!-- Google search form -->
+      <form action="https://www.google.com/search" method="get">
+        <div class="row">
+          <input name="q" type="text" placeholder="Search Google..." autofocus>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <!-- Weather iframe using wttr.in -->
+      <div class="weather">
+        <iframe 
+          src="https://wttr.in/Port+Coquitlam?format=3" 
+          width="200" 
+          height="50" 
+          scrolling="no">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
