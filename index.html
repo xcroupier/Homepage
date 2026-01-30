@@ -1,101 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
-
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      background: #212121;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
-
-    .wrap {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .box {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .row {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    input[type="text"]{
-      width: 460px;
-      max-width: 80vw;
-      padding: 14px 18px;
-      font-size: 18px;
-      border-radius: 999px;
-      border: 1px solid #3a3a3a;
-      outline: 0;
-      background: #2c2c2c;
-      color: #ffffff;
-    }
-
-    input[type="text"]::placeholder{
-      color: #bdbdbd;
-    }
-
-    button{
-      padding: 14px 22px;
-      font-size: 18px;
-      border-radius: 999px;
-      border: 0;
-      cursor: pointer;
-      background: #3a3a3a;
-      color: #ffffff;
-    }
-
-    .weather {
-      margin-top: 22px;
-      display: flex;
-      justify-content: center;
-      min-height: 50px;
-    }
-
-    iframe {
-      border: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>My Minimal Google</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: #212121; /* very dark gray */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .search-container {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 450px;
+            padding: 12px 16px;
+            font-size: 18px;
+            border-radius: 999px; /* large radius */
+            border: none;
+            outline: none;
+        }
+        input[type="submit"] {
+            padding: 12px 20px;
+            font-size: 18px;
+            margin-left: 8px;
+            border-radius: 999px; /* large radius */
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <div class="box">
-
-      <!-- Google search form -->
-      <form action="https://www.google.com/search" method="get">
-        <div class="row">
-          <input name="q" type="text" placeholder="Search Google..." autofocus>
-          <button type="submit">Search</button>
-        </div>
-      </form>
-
-      <!-- Weather iframe using wttr.in -->
-      <div class="weather" style="background: #212121; padding: 8px; border-radius: 8px;">
-        <iframe 
-          src="https://wttr.in/Port+Coquitlam?format=3" 
-          width="700" 
-          height="120" 
-          scrolling="no">
-        </iframe>
-      </div>
-
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search Google...">
+            <input type="submit" value="Search">
+        </form>
     </div>
-  </div>
 </body>
 </html>
