@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #212121;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"]{
+      width: 460px;
+      max-width: 80vw;
+      padding: 14px 18px;
+      font-size: 18px;
+      border-radius: 999px;
+      border: 1px solid #3a3a3a;
+      outline: 0;
+      background: #2c2c2c;
+      color: #ffffff;
+    }
+
+    input[type="text"]::placeholder{
+      color: #bdbdbd;
+    }
+
+    button{
+      padding: 14px 22px;
+      font-size: 18px;
+      border-radius: 999px;
+      border: 0;
+      cursor: pointer;
+      background: #3a3a3a;
+      color: #ffffff;
+    }
+
+    .weather {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="box">
+
+      <form action="https://www.google.com/search" method="get">
+        <div class="row">
+          <input name="q" type="text" placeholder="Search Google..." autofocus>
+          <button type="submit">Search</button>
+        </div>
+      </form>
+
+      <div class="weather">
+        <a class="weatherwidget-io"
+           href="https://forecast7.com/en/49d26n122d78/port-coquitlam/"
+           data-label_1="PORT COQUITLAM"
+           data-label_2="WEATHER"
+           data-theme="dark">
+          PORT COQUITLAM WEATHER
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
+</body>
+</html>
