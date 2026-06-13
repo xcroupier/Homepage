@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minimal Search</title>
     <style>
-        /* Base page styling for a minimalist layout */
+        /* Firefox Focus Theme Colors */
         body {
             margin: 0;
             padding: 0;
@@ -13,11 +13,11 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #ffffff;
+            background-color: #1a002c; /* Firefox Focus Dark Purple */
             font-family: sans-serif;
         }
 
-        /* The flex container that locks the items on one line */
+        /* Container keeping items lined up together */
         .search-container {
             display: flex;
             width: 100%;
@@ -27,35 +27,42 @@
             box-sizing: border-box;
         }
 
-        /* Text Input Styling */
+        /* Dark Mode Text Input */
         input[type="text"] {
             font-size: 18px;
             padding: 12px;
             box-sizing: border-box;
             flex: 1;
             width: 0;
-            border: 1px solid #ccc;
+            border: 1px solid #4a2d66;
             border-radius: 4px;
+            background-color: #2b0c42; /* Slightly lighter purple for contrast */
+            color: #ffffff; /* White text when typing */
         }
 
-        /* Submit Button Styling */
+        /* Makes the placeholder text a readable muted grey */
+        input[type="text"]::placeholder {
+            color: #b099c2;
+        }
+
+        /* Dark Mode Submit Button */
         input[type="submit"] {
             font-size: 18px;
             padding: 12px 20px;
             box-sizing: border-box;
-            border: 1px solid #ccc;
+            border: 1px solid #ff4f5e; /* Firefox Focus Coral Accent Border */
             border-radius: 4px;
-            background-color: #f8f9fa;
+            background-color: #ff4f5e; /* Firefox Focus Coral Accent Button */
+            color: #ffffff; /* White button text */
+            font-weight: bold;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- Standard HTML Form connecting safely to Google Search -->
     <form action="https://google.com" method="get" style="width: 100%; display: flex; justify-content: center;">
         <div class="search-container">
-            <!-- autocomplete="off" stops your 20-year history drop-down -->
             <input type="text" name="q" autocomplete="off" placeholder="Search Google...">
             <input type="submit" value="Search">
         </div>
